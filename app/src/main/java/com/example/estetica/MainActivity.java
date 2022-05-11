@@ -14,7 +14,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     EditText usr,contraseña;
     Button btn_ingresar;
-    AdminSQLiteOpenHelper ad=new AdminSQLiteOpenHelper(this, "bd_usuarios", null,1);
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,16 +26,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
     //boton para validar datos e iniciar sesion
     public void onClick(View view) {
-       int a=0;
-        Cursor fila=ad.getReadableDatabase().rawQuery("select * from USUARIO",null);
-        if (fila != null && fila.moveToFirst()){
-do {
-    if (fila.getString(1).equals(usr)&&fila.getString(2).equals(contraseña)){
-        i++;
-    }while ()
-}
+        AdminSQLiteOpenHelper admin=new AdminSQLiteOpenHelper(this,"bd_usuarios",null,1);
+        SQLiteDatabase bd=admin.getWritableDatabase();
+        String id=usr.getText().toString();
+        String pass=contraseña.getText().toString();
+        if (!id.isEmpty() && !pass.isEmpty() ){
+            Cursor fila=bd.rawQuery("select usr, pass from USUARIO", null);
+            if (fila.moveToFirst()){
+                if (fila.getString(1).equals(id)&&fila.getString(2).equals(pass)){
+                }
+                bd.close();
+            }else{
+                Toast.makeText(this, "No existe el usuario", Toast.LENGTH_SHORT).show();
+                bd.close();
+            }
+        }else {
+            Toast.makeText(this, "Debes introducir todos  los datos", Toast.LENGTH_SHORT).show();
+            bd.close();
         }
     }
+
     public  void Registro(View view){
         Intent intent= new Intent(this,Activity_registro.class);
         startActivity(intent);
