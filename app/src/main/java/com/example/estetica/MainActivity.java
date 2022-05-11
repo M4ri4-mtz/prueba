@@ -1,6 +1,7 @@
 package com.example.estetica;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
 import android.database.Cursor;
@@ -11,6 +12,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.example.estetica.ui.home.HomeFragment;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     EditText usr,contraseña;
@@ -32,12 +35,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         String u=usr.getText().toString();
         String p=contraseña.getText().toString();
         if (TextUtils.isEmpty(u) || TextUtils.isEmpty(p))
-            Toast.makeText(MainActivity.this," los datos son requeridos", Toast.LENGTH_SHORT).show();
+            Toast.makeText(MainActivity.this,"contraseña u usuario incorrecto", Toast.LENGTH_SHORT).show();
             else{
                 Boolean validacion =admin.validacionpass(u,p);
                 if (validacion==true){
                     Toast.makeText(MainActivity.this,"inicio correcto", Toast.LENGTH_SHORT).show();
-                    Intent intent= new Intent(this,MainActivity.class);
+                    Intent intent= new Intent(this,HomeFragment.class);
                     startActivity(intent);
                 }
             }
