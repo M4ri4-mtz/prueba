@@ -4,7 +4,20 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Marib/AndroidStudioProjects/estetica/app/src/main/res/layout/activity_main.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/Marib/AndroidStudioProjects/estetica/app/src/main/res/layout/activity_main2.xml" value="0.25" />
         <entry key="..\:/Users/Marib/AndroidStudioProjects/estetica/app/src/main/res/layout/activity_registro.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/Marib/AndroidStudioProjects/estetica/app/src/main/res/layout/app_bar_main.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/Marib/AndroidStudioProjects/estetica/app/src/main/res/layout/content_main.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/Marib/AndroidStudioProjects/estetica/app/src/main/res/layout/content_main2.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/Marib/AndroidStudioProjects/estetica/app/src/main/res/layout/content_navegacion.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/Marib/AndroidStudioProjects/estetica/app/src/main/res/layout/fragment_gallery.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/Marib/AndroidStudioProjects/estetica/app/src/main/res/layout/fragment_home.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/Marib/AndroidStudioProjects/estetica/app/src/main/res/layout/fragment_slideshow.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/Marib/AndroidStudioProjects/estetica/app/src/main/res/layout/nav_header_main.xml" value="0.28112449799196787" />
+        <entry key="..\:/Users/Marib/AndroidStudioProjects/estetica/app/src/main/res/menu/activity_main_drawer.xml" value="0.2" />
+        <entry key="..\:/Users/Marib/AndroidStudioProjects/estetica/app/src/main/res/menu/main_activity2.xml" value="0.2" />
+        <entry key="..\:/Users/Marib/AndroidStudioProjects/estetica/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
+        <entry key="..\:/Users/Marib/AndroidStudioProjects/estetica/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1" />
       </map>
     </option>
   </component>
