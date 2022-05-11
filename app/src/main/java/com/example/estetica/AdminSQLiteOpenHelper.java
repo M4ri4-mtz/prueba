@@ -18,7 +18,26 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
     }
 
     @Override
-    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+    public void onUpgrade(SQLiteDatabase bd, int oldVersion, int newVersion) {
+bd.execSQL("drop table  if exists USUARIO");
+    }
+
+    public  Boolean validacion(String usr){
+        SQLiteDatabase bd=this.getWritableDatabase();
+        Cursor cursor=bd.rawQuery("select * from USUARIO where usr=? and pass=?", new String[]{usr});
+        if (cursor.getCount()>0)
+            return  true;
+        else
+            return false;
+
+    }
+    public  Boolean validacionpass(String usr, String pass){
+        SQLiteDatabase bd=this.getWritableDatabase();
+        Cursor cursor=bd.rawQuery("select * from USUARIO where usr=? and pass=?", new String[]{usr,pass});
+        if (cursor.getCount()>0)
+            return  true;
+        else
+            return false;
 
     }
 }
