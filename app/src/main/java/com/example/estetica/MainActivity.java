@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Boolean validacion =admin.validacionpass(u,p);
                 if (validacion==true){
                     Toast.makeText(MainActivity.this,"inicio correcto", Toast.LENGTH_SHORT).show();
-                    Intent intent= new Intent(this,HomeFragment.class);
+                    Intent intent =new Intent(getApplicationContext(),Activity_registro.class);
                     startActivity(intent);
                 }
             }
